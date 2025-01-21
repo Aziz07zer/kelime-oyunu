@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="question-number" id="question-number">Soru 1/12</div>
+    <div class="quiz-container">
+        <div class="question" id="question">Soru metni buraya gelecek</div>
+        <div class="message" id="message"></div>
+        <div class="options">
+            <button class="option" onclick="selectOption(0)">Şık 1</button>
+            <button class="option" onclick="selectOption(1)">Şık 2</button>
+            <button class="option" onclick="selectOption(2)">Şık 3</button>
+            <button class="option" onclick="selectOption(3)">Şık 4</button>
+            <button class="option" onclick="selectOption(4)">Şık 5</button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay">
+        <div class="overlay-message" id="overlay-message"></div>
+    </div>
+    <div class="email-form" id="email-form" style="display: none;">
+        <h2>Tebrikler! Tüm soruları doğru bildiniz.</h2>
+        <p>Lütfen e-posta adresinizi girin:</p>
+        <input type="email" id="email" placeholder="E-posta adresiniz">
+        <button onclick="sendEmail()">Gönder</button>
+    </div>
+    <audio id="correct-sound" src="dogru.mp3"></audio>
+    <audio id="wrong-sound" src="yanlis.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
